@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
   this.registrationForm = this.fb.group({
     form: this.fb.array([
       this.fb.group({
-        firstName: [''],
+        firstName: ['', [Validators.required]],
         lastName: [''],
         email: ['',[Validators.required, Validators.email]],
         number: [''],
@@ -32,6 +32,10 @@ export class FormComponent implements OnInit {
       ])
   })
 }
+
+ get firstName() {
+    return this.registrationForm.get('firstName')
+}
   get f(){
      return this._form.controls;
    }
@@ -40,10 +44,10 @@ export class FormComponent implements OnInit {
     return this.registrationForm.get('form') as FormArray;
   }
   get password() {
-    return this._form.get('password') as FormArray;
+    return this._form.get('password');
   }
   get confirmPassword() {
-    return this._form.get('confirmPassword') as FormArray;
+    return this._form.get('confirmPassword') ;
   }
 
   addForm() {
