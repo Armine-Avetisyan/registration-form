@@ -1,0 +1,28 @@
+h2{
+  text-align: center;
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+label{
+  font-size: 20px;
+  font-family: Verdana;
+  margin-right: 5px;
+}
+button{
+  width: 100px;
+  height: 40px;
+  margin: 5px 5px 15px 5px;background-color: #010110;
+  color: lightgray;
+}
+input{
+  padding: 5px;
+  margin: 3px;
+}
+select{
+  width: 50px;
+  height: 20px;
+  font-size: 15px;
+}
+
